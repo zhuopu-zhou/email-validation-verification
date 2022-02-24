@@ -11,10 +11,15 @@ exports.sendVerificationCode = async (req, res) => {
   };
 
   console.log(emailResponseObject);
-
+//add code to firebase
   await db
     .collection("verification-code")
     .add({ verificationCode: emailResponseObject.verificationCode });
+//send code to user email
+//
+//to be implemented
+//
+//send back message to user
   emailResponseObject.message =
     "your verification code is sent, plz check your email";
   res.send(emailResponseObject);
