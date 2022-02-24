@@ -60,27 +60,4 @@ const isUserEmailTaken = async (email) => {
   }
 };
 
-// const isEmailTaken = (newEmail,res) => {
-//   db.collection("users")
-//     .where("email", "==", newEmail.email)
-//     .get()
-//     .then(async (snapshot) => {
-//       const isEmailTaken = snapshot.docs.length > 0;
-//       if (isEmailTaken == true) {
-//         newEmail.message = "email already been used.\nplease try another one ";
-//         // calling function
-//         res.send(newEmail);
-//       } else {
-//         const isRegistered = await isSchoolRegistered(newEmail.email);
-//         newEmail.isValid = isRegistered;
-//         {
-//           newEmail.isValid
-//             ? (newEmail.message = "email can be used.")
-//             : (newEmail.message =
-//                 "your university email is not surpported yet.");
-//         }
-//         res.send(newEmail);
-//       }
-//     })
-//     .catch((err) => res.status(500).send(err));
-// };
+
